@@ -1,0 +1,19 @@
+//https://blueprintjs.com/docs/
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+  height: 100vh;
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+  flex-direction: column;
+  .inputComponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .bracketCompontent {
+    color: white;
+  }
+}
