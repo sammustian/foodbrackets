@@ -9,7 +9,7 @@ class BracketItem extends Component {
 		return (
 			<div className="bracketItemComponent">
 				<div className="label">{this.props.name}</div>
-				<button type="button" onClick={this.props.handleDeleteContender(this.props.index)}>X</button>
+				<button type="button" onClick={this.props.handleDeleteContender()}>X</button>
 			</div>
 		)
 	}
