@@ -8,10 +8,35 @@
   padding: 3rem;
   justify-content: center;
   flex-direction: column;
+  .bracketCompontent {
+    .bracketItemComponent {
+      display: flex;
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+      padding: 1rem;
+      justify-content: space-between;
+      .label {
+        font-weight: 700;
+        font-size: 18px;
+      }
+      button {
+        color: red;
+        background: none;
+        border: none;
+        font-weight: bold;
+        font-size: 20px;
+        
+      }
+    }
+  }
   .inputComponent {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 325px;
+    width: 100%;
+    margin: 0 auto;
   }
   .bracketCompontent {
     color: white;

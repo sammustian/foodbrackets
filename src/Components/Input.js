@@ -11,7 +11,7 @@ class Input extends Component {
 		};
 	}
 
-    onSelectionAdded(selection) {
+    selectionAdded(selection) {
         this.props.onSelectionAdded(selection);
         this.setState({
             inputValue: ""
@@ -26,6 +26,7 @@ class Input extends Component {
 
 	render() {
 		const selection = this.state.inputValue;
+
 		return (
 			<div className="inputComponent">
 				<input
@@ -34,7 +35,7 @@ class Input extends Component {
 					onChange={e => this.updateInputValue(e)}
 					placeholder="add a resturant"
 				/>
-				<button onClick={() => this.onSelectionAdded(selection)} type="submit">
+				<button onClick={() => this.selectionAdded(selection)} type="submit">
 					Add Selection
 				</button>
 			</div>

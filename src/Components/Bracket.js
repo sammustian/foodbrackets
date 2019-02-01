@@ -4,31 +4,38 @@ import BracketItem from './BracketItem';
 class Bracket extends Component {
 	constructor(props) {
 		super(props);
+		this.deleteContender = this.deleteContender.bind(this);
 		this.state = {
 			selection: []
 		};
 	}
 
 	componentWillReceiveProps(newProps) {
-        this.setState({
-            selection: newProps.contenders
-        })
-    }
+		this.setState({
+			selection: newProps.contenders
+		});
+	}
 
-    deleteContender(index) {
-       // this.props.deleteContender(index);
-       //console.log('what');
-    }
+	deleteContender(index) {
+		
+	}
 
 	render() {
-        const contenders = this.state.selection;
-        return (
-            <div className="bracketCompontent">
-                {contenders.map((value, index) => {
-                    return (<BracketItem handleDeleteContender={() => this.deleteContender(index)} key={value + '_' +index} name={value} index={index} />)
-                })}
-            </div>
-        )
+		const contenders = this.state.selection;
+		return (
+			<div className="bracketCompontent">
+				{contenders.map((value, index) => {
+					return (
+						<BracketItem
+							handleDeleteContender={() => this.props.deleteContender(index)}
+							key={value + "_" + index}
+							name={value}
+							index={index}
+						/>
+					);
+				})}
+			</div>
+		);
 	}
 }
 

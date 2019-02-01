@@ -2,21 +2,14 @@ import React, { Component } from 'react';
 
 class BracketItem extends Component {
 	constructor(props) {
-		super(props);
-		this.handleDeleteContender = this.handleDeleteContender.bind(this);
-		
+		super(props);		
     }
     
-    handleDeleteContender(key) {
-		//this.props.handleDeleteContender(key)
-		console.log('sam');
-    }
-
     render() {
 		return (
 			<div className="bracketItemComponent">
 				<div className="label">{this.props.name}</div>
-				<button type="button" onClick={this.handleDeleteContender()}>Delete</button>
+				<button type="button" onClick={this.props.handleDeleteContender(this.props.index)}>X</button>
 			</div>
 		)
 	}

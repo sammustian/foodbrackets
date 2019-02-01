@@ -6,15 +6,18 @@ import Bracket from "./Components/Bracket";
 
 class App extends Component {
 	constructor() {
-    super();
-    this.deleteContender = this.deleteContender.bind(this);
+		super();
+		//this.deleteContenderFromState = this.deleteContenderFromState.bind(this);
 		this.handleSelectionAdded = this.handleSelectionAdded.bind(this);
 		this.state = {
 			selection: []
 		};
 	}
-	deleteContender(index) {
-    let temp = this.state.selection;
+
+	deleteContenderFromState(index) {
+	//let temp = this.state.selection;
+	console.log('deleting from state');
+	console.log(index);
     //console.log(temp[index]);
 
   }
@@ -30,7 +33,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Bracket
-					deleteContender={this.deleteContender}
+					deleteContender={this.deleteContenderFromState}
 					contenders={this.state.selection}
 				/>
 				<Input onSelectionAdded={this.handleSelectionAdded} />
